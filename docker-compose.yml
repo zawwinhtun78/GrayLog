@@ -16,7 +16,7 @@ volumes:
 services:
   # Graylog stores configuration in MongoDB
   mongo:
-    image: mongo:6.0.5-jammy
+    image: mongo:7.0.5-jammy
     container_name: mongodb
     volumes:
       - "mongo_data:/data/db"
@@ -62,8 +62,8 @@ services:
       GRAYLOG_HTTP_EXTERNAL_URI: "http://localhost:9000/"
       GRAYLOG_ELASTICSEARCH_HOSTS: "http://opensearch:9200"
       GRAYLOG_MONGODB_URI: "mongodb://mongodb:27017/graylog"
-      GRAYLOG_TIMEZONE: "America/Detroit"
-      TZ: "America/Detroit"
+      GRAYLOG_TIMEZONE: "Asia/Singapore"
+      TZ: "Asia/Singapore"
       GRAYLOG_TRANSPORT_EMAIL_PROTOCOL: "smtp"
       GRAYLOG_TRANSPORT_EMAIL_WEB_INTERFACE_URL: "http://192.168.3.233:9000/"
       GRAYLOG_TRANSPORT_EMAIL_HOSTNAME: "outbound.mailhop.org"
